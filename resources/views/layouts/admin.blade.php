@@ -13,26 +13,8 @@
     <meta content="Themesbrand" name="author" />
 
     <title>@yield('title')</title>
-    {{-- Điền các link CSS dùng chung --}}
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/admins/images/favicon.ico') }}">
 
-    <!-- jsvectormap css -->
-    <link href="{{ asset('assets/admins/libs/jsvectormap/jsvectormap.min.css') }}" rel="stylesheet" type="text/css" />
-
-    <!--Swiper slider css-->
-    <link href="{{ asset('assets/admins/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
-
-    <!-- Layout config Js -->
-    <script src="{{ asset('assets/admins/js/layout.js') }}"></script>
-    <!-- Bootstrap Css -->
-    <link href="{{ asset('assets/admins/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link href="{{ asset('assets/admins/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
-    <link href="{{ asset('assets/admins/css/app.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- custom Css-->
-    <link href="{{ asset('assets/admins/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
+    @include('admins.blocks.links.css')
     @yield('CSS')
 </head>
 
@@ -58,29 +40,7 @@
     </div>
 
     {{-- Các đoạn script dùng chung --}}
-    <script src="{{ asset('assets/admins/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/admins/libs/simplebar/simplebar.min.js') }}"></script>
-    <script src="{{ asset('assets/admins/libs/node-waves/waves.min.js') }}"></script>
-    <script src="{{ asset('assets/admins/libs/feather-icons/feather.min.js') }}"></script>
-    <script src="{{ asset('assets/admins/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
-    <script src="{{ asset('assets/admins/js/plugins.js') }}"></script>
-
-    <!-- apexcharts -->
-    <script src="{{ asset('assets/admins/libs/apexcharts/apexcharts.min.js') }}"></script>
-
-    <!-- Vector map-->
-    <script src="{{ asset('assets/admins/libs/jsvectormap/jsvectormap.min.js') }}"></script>
-    <script src="{{ asset('assets/admins/libs/jsvectormap/maps/world-merc.js') }}"></script>
-
-    <!--Swiper slider js-->
-    <script src="{{ asset('assets/admins/libs/swiper/swiper-bundle.min.js') }}"></script>
-
-    <!-- Dashboard init -->
-    <script src="{{ asset('assets/admins/js/pages/dashboard-ecommerce.init.js') }}"></script>
-
-    <!-- App js -->
-    <script src="{{ asset('assets/admins/js/app.js') }}"></script>
-    </script>
+    @include('admins.blocks.links.js')
     @yield('JS')
 </body>
 
